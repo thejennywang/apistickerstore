@@ -1,0 +1,17 @@
+body {
+	font-family: sans-serif;
+	color: #333;
+}
+
+.container {
+	max-width: 300px;
+	margin: auto;
+}
+
+.sticker {
+	padding: 5px;
+	img {
+	border: solid 1px #ccc;
+	max-width: 300px;
+	}
+}
