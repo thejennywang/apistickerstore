@@ -5,6 +5,8 @@ ruby '2.6.3'
 
 gem 'stripe'
 
+gem 'heroku'
+
 gem 'rename'
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
