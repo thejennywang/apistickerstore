@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 gem 'stripe'
 gem 'rename'
+gem "twitter-bootstrap-rails"
 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
 gem 'rails', '~> 6.0.2', '>= 6.0.2.1'
