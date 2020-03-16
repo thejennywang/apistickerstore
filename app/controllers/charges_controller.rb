@@ -4,13 +4,19 @@ end
 
 def create
   # Amount in cents
-  @amount = 500
+  @amount = current_order.subtotal * 100
+
+  customer = Stripe::Customer.create(
+  	:email => params[:stripeEmail],
+  	:source => params[:stripeToken]
+  	)
 
 
   charge = Stripe::Charge.create({
+  	customer: customer.id,
     amount: @amount,
     description: '5 Stickers',
-    currency: 'usd',
+    currency: 'USD',
   })
 
 rescue Stripe::CardError => e

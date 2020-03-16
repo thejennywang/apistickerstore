@@ -3,7 +3,7 @@ class OrderItem < ApplicationRecord
 	belongs_to :product
 
 	before_save :set_unit_price
-	before_save :set_total_price
+	before_save :set_total
 
 	def unit_price
 		if persisted?
@@ -13,7 +13,7 @@ class OrderItem < ApplicationRecord
 		end
 	end
 
-	def total_price
+	def total
 		unit_price * quantity
 	end
 
@@ -23,7 +23,7 @@ class OrderItem < ApplicationRecord
 			self[:unit_price] = unit_price
 		end
 
-		def set_total_price
+		def set_total
 			self[:total] = quantity * set_unit_price
 		end
 end

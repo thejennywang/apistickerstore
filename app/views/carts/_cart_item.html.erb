@@ -25,12 +25,13 @@
 							<%= f.submit "Update Quantity", class: 'btn btn-primary' %>
 							<%= link_to "Delete", item, method: :delete, remote: true, class: 'btn btn-danger'  %>
 						</div>
-						<div>Total Price: <%= item.total_price %></div>
+						<div>Total Price: <%= item.product.price %></div>
 					<% end %>
 					</div>
 				</div>
 			</div>
 		</div>
 	<% end %>
+	<% else %>
 	
 <% end %>

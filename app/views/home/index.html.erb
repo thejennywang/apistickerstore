@@ -1,4 +1,4 @@
-<h1>API Stickers</h1>
+<h1>Treat Yourself</h1>
 
 <% @products.each do |product| %>
 	<div class="well">
@@ -6,9 +6,10 @@
 			<div class="sm-8">
 				<h3><%= product.name %></h3>
 			</div>
+			
 			<div class="col-sm-4">
 				<div class="pull-right">
-					<%= form_for(@order_item) do |f| %>
+					<%= form_for(@order_item, remote: true) do |f| %>
 						<%= f.hidden_field :product_id, value: product.id %>
 							<h5><%= product.price %></h5>
 							<div class="form-group">

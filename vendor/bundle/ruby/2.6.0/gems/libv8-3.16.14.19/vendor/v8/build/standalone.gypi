@@ -77,9 +77,9 @@
       }],
     ],
     # Default ARM variable settings.
-    'armv7%': 0,
+    'armv7%': 1,
     'arm_neon%': 0,
-    'arm_fpu%': 'vfp',
+    'arm_fpu%': 'vfpv3',
   },
   'target_defaults': {
     'default_configuration': 'Debug',
@@ -107,7 +107,7 @@
           [ 'visibility=="hidden" and v8_enable_backtrace==0', {
             'cflags': [ '-fvisibility=hidden' ],
           }],
-          [ 'component=="shared_library" or component=="static_library" and v8_target_arch=="x64" or v8_target_arch=="arm"', {
+          [ 'component=="shared_library"', {
             'cflags': [ '-fPIC', ],
           }],
         ],
@@ -194,7 +194,7 @@
           'GCC_INLINES_ARE_PRIVATE_EXTERN': 'YES',
           'GCC_SYMBOLS_PRIVATE_EXTERN': 'YES',      # -fvisibility=hidden
           'GCC_THREADSAFE_STATICS': 'NO',           # -fno-threadsafe-statics
-          'GCC_GENERATE_DEBUGGING_SYMBOLS': 'NO',   # No -gdwarf-2
+          'GCC_TREAT_WARNINGS_AS_ERRORS': 'YES',    # -Werror
           'GCC_VERSION': 'com.apple.compilers.llvmgcc42',
           'GCC_WARN_ABOUT_MISSING_NEWLINE': 'YES',  # -Wnewline-eof
           # MACOSX_DEPLOYMENT_TARGET maps to -mmacosx-version-min
