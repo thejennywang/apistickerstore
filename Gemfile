@@ -57,10 +57,11 @@ gem 'stripe'
 gem 'rename'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'
-gem 'sprockets'
-gem 'therubyracer'
-gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
-gem 'twitter-bootstrap-rails'
+# gem 'sprockets'
+# gem 'mini_racer'
+# gem 'therubyracer'
+# gem 'less-rails' #Sprockets (what Rails 3.1 uses for its asset pipeline) supports LESS
+# gem 'twitter-bootstrap-rails'
 gem 'activerecord-session_store'
 
 

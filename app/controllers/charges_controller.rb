@@ -15,7 +15,7 @@ def create
   charge = Stripe::Charge.create({
   	customer: customer.id,
     amount: @amount,
-    description: '5 Stickers',
+    description: 'Thank you!',
     currency: 'USD',
   })
 
