@@ -54,6 +54,7 @@ end
 gem 'tzinfo-data', platforms: [:mingw, :mswin, :x64_mingw, :jruby]
 
 gem 'stripe'
+gem 'stripe-rails'
 gem 'rename'
 gem 'bootstrap', '~> 4.4.1'
 gem 'jquery-rails'

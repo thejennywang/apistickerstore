@@ -1,5 +1,7 @@
 Rails.application.configure do
   # Settings specified here will take precedence over those in config/application.rb.
+  config.stripe.secret_key = Rails.application.credentials.stripe[:production][:secret_key]
+  config.stripe.publishable_key = Rails.application.credentials.stripe[:production][:publishable_key]
 
   # Code is not reloaded between requests.
   config.cache_classes = true

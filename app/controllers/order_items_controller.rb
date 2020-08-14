@@ -19,17 +19,9 @@ class OrderItemsController < ApplicationController
 	end
 
 	def destroy
-		print "START DESTROY"
-		print "START DESTROY"
 		@order = current_order
-		puts @order
-		puts @order
 		@order_item = @order.order_items.find(params[:id])
-		print "ORDER ITEM"
-		print "ORDER ITEM"
-		puts @order_item
 		@order_item.destroy
-		puts @order_items
 		@order_items = @order.order_items
 	end
 

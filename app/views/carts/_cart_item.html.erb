@@ -22,9 +22,10 @@
 							<%= f.text_field :quantity, value: item.quantity.to_i, min: 1, class: 'form-control' %>
 						</div>
 						<div class="btn-group">
+							<%= f.submit "Update Quantity", class: 'btn btn-primary' %>
 							<%= link_to "Delete", item, method: :delete, remote: true, class: 'btn btn-danger'  %>
 						</div>
-						<div>Total Price: <%= item.product.price %></div>
+						<div>Price: <%= item.total %></div>
 					<% end %>
 					</div>
 				</div>

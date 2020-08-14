@@ -1,10 +1,10 @@
 module ApplicationHelper
+
 	def current_order
-		puts session[:order_id]
-		if session[:order_id].nil?
-			Order.new
-		else
+		if !session[:order_id].nil?
 			Order.find(session[:order_id])
+		else
+			Order.new
 		end
 	end
 end
